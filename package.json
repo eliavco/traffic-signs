@@ -1,0 +1,25 @@
+{
+  "name": "traffic-signs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliavco/traffic-signs.git"
+  },
+  "author": "Eliav Cohen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliavco/traffic-signs/issues"
+  },
+  "homepage": "https://github.com/eliavco/traffic-signs#readme",
+  "dependencies": {
+    "file-type": "^16.0.0",
+    "jsdom": "^16.4.0",
+    "node-fetch": "^2.6.1",
+    "slugify": "^1.4.5"
+  }
+}
