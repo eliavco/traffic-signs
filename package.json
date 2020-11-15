@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ."
+    "start:a": "node .",
+    "start:b": "node extract.js"
   },
   "repository": {
     "type": "git",
