@@ -27,3 +27,21 @@ const bPath = "/Users/eliavcohen/Documents/Development/traffic-signs-android/app
 //   }
 // }
 
+function formatString(st) {
+	st = st.replace(/(\r\n|\n|\r)/gm, "\\n");
+	st = st.replace(/'/g, "''");
+	return st;
+}
+
+const signs = db
+  .map(
+    (s) =>
+      `('${formatString(s.image.name.substring(
+        0,
+        s.image.name.indexOf('.')
+      ))}', '${formatString(s.category)}', '${formatString(s.details.group)}', '${formatString(s.details.meaning)}', '${formatString(s.details.deepMeaning)}', '${formatString(s.details.hisPowerIsBeautiful)}', '${formatString(s.image.name)}')`
+  )
+  .join(",\n");
+const sql = `INSERT INTO signs (id, category, sGroup, meaning, purpose, power, image)
+VALUES ${signs};`;
+fs.writeFileSync('sql.txt', sql);
