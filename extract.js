@@ -28,7 +28,7 @@ const bPath = "/Users/eliavcohen/Documents/Development/traffic-signs-android/app
 // }
 
 function formatString(st) {
-	st = st.replace(/(\r\n|\n|\r)/gm, "\\n");
+	st = st.replace(/(\r\n|\n|\r)/gm, "\n");
 	st = st.replace(/'/g, "''");
 	return st;
 }
